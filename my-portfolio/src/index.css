@@ -7,20 +7,20 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #09090b;
-  color: #fafafa;
+  background: #edf4ff;
+  color: #0f172a;
   font-family: Inter, system-ui, sans-serif;
 }
 
 ::selection {
-  background: #ffffff;
-  color: #09090b;
+  background: #f59e0b;
+  color: #ffffff;
 }
 
 
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
+  --text: #334155;
+  --text-h: #0f172a;
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
@@ -75,11 +75,10 @@ body {
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -102,6 +101,20 @@ h1 {
     margin: 20px 0;
   }
 }
+.contact-heading {
+  font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.05em !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #e6ebff 45%, #ffd7a8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 h2 {
   font-size: 24px;
   line-height: 118%;
