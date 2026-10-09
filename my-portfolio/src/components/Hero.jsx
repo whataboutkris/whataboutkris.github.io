@@ -1,10 +1,13 @@
 import { motion } from "motion/react";
 import heroImage from "../assets/hero.png";
+import TerminalText from "./TerminalText";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   return (
     <section className="flex min-h-[76vh] items-center justify-center bg-gradient-to-br from-[#668EF2] via-[#f6f9ff] to-[#F2D483] px-6 py-12 text-slate-900">
       <div className="mx-auto w-full max-w-5xl">
+        {/* Portrait Animation */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,14 +24,28 @@ export default function Hero() {
               />
             </div>
           </div>
-
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left order-2 lg:order-2">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.35em] text-orange-500">
-              Hello, I'm
+          {/* Typing Animation */}
+          <div className="flex flex-col items-  center text-center lg:items-start lg:text-left order-2 lg:order-2">
+            <p className="mb-4 font-mono text-xl uppercase tracking- [0.25em]
+            text-orange-600">
+              <span className=""></span>{" "}
+              <TerminalText
+                text="Hello, I'm"
+                speed={70}
+                delay={700}
+                showCursor={false}
+                className="text-black"
+              />
             </p>
 
-            <h1 className="text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
-              Kris.
+            <h1>
+              <TerminalText
+                text="Kris."
+                speed={150}
+                delay={1600}
+                showCursor={true}
+                className="text-5xl text-black font-bold tracking-tight sm:text-6xl lg:text-7xl"
+              />
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl">

@@ -142,3 +142,22 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.terminal-cursor {
+display: inline-block;
+margin-left: 3px;
+color: #000000;
+animation: terminal-blink 0.8s steps(2, start) infinite;
+}
+
+@keyframes terminal-blink {
+to {
+visibility: hidden;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.terminal-cursor {
+animation: none;
+}
+}
